@@ -1,0 +1,70 @@
+section {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+section p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: #1a1a1a;
+  font-weight: 500;
+}
+
+/* Remove bullet points */
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+li {
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+  border-left: 4px solid #0066cc;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+li:hover {
+  background-color: #e6f0ff;
+  transform: translateX(8px);
+  box-shadow: 0 4px 12px rgba(0, 102, 204, 0.15);
+}
+
+li a {
+  font-weight: 600;
+  color: #0066cc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+li a::after {
+  content: '→';
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+li:hover a::after {
+  opacity: 1;
+}
+
+li a:hover {
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  ul {
+    grid-template-columns: 1fr;
+  }
+
+  li {
+    padding: 1.25rem;
+  }
+}

@@ -1,11 +1,11 @@
 section {
-  margin: 2rem 0;
+  margin: clamp(1rem, 4vw, 2rem) 0;
   text-align: center;
 }
 
 section p {
-  font-size: 1.1rem;
-  margin-bottom: 1.5rem;
+  font-size: clamp(1rem, 2.5vw, 1.1rem);
+  margin-bottom: clamp(1rem, 3vw, 1.5rem);
   color: #1a1a1a;
   font-weight: 500;
 }
@@ -15,24 +15,24 @@ ul {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: clamp(1rem, 3vw, 1.5rem);
   align-items: center;
 }
 
 li {
-  padding: 1.5rem;
+  padding: clamp(1rem, 3vw, 1.5rem);
   background-color: #f8f9fa;
   border-left: 4px solid #0066cc;
   border-radius: 4px;
   transition: all 0.3s ease;
-  max-width: 400px;
+  max-width: clamp(300px, 90vw, 400px);
   width: 100%;
   text-align: center;
 }
 
 li:hover {
   background-color: #e6f0ff;
-  transform: translateX(8px);
+  transform: translateX(clamp(4px, 2vw, 8px));
   box-shadow: 0 4px 12px rgba(0, 102, 204, 0.15);
 }
 
@@ -43,6 +43,7 @@ li a {
   align-items: center;
   justify-content: center;
   text-decoration: none;
+  font-size: clamp(0.9rem, 2vw, 1rem);
 }
 
 li a::after {
@@ -59,12 +60,8 @@ li a:hover {
   text-decoration: none;
 }
 
-@media (max-width: 768px) {
-  ul {
-    grid-template-columns: 1fr;
-  }
-
-  li {
-    padding: 1.25rem;
+@media (max-width: 480px) {
+  li:hover {
+    transform: translateX(4px);
   }
 }

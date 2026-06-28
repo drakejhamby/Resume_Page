@@ -2,14 +2,15 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
-  margin: 2rem 0;
+  gap: clamp(1rem, 5vw, 2rem);
+  margin: clamp(1rem, 4vw, 2rem) 0;
   text-align: center;
+  flex-wrap: wrap;
 }
 
 img {
-  width: 250px;
-  height: 250px;
+  width: clamp(150px, 40vw, 250px);
+  height: clamp(150px, 40vw, 250px);
   object-fit: cover;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -18,26 +19,27 @@ img {
 
 section p {
   flex: 1;
-  font-size: 1.1rem;
+  font-size: clamp(0.95rem, 2.5vw, 1.1rem);
   line-height: 1.8;
   color: #666666;
   text-align: center;
+  min-width: 250px;
 }
 
 @media (max-width: 768px) {
   section {
     flex-direction: column;
     align-items: center;
-    text-align: center;
-  }
-
-  img {
-    width: 200px;
-    height: 200px;
   }
 
   section p {
     flex: none;
-    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  img {
+    width: clamp(120px, 30vw, 150px);
+    height: clamp(120px, 30vw, 150px);
   }
 }

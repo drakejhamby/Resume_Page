@@ -3,7 +3,9 @@ function Portfolio() {
         <section>
             <p>Here are some of my projects:</p>
             <ul>
-                <li><a href="https://github.com/repos" target="_blank" rel="noopener noreferrer">Project 1</a></li>
+                <li><a href="https://drakejhamby.github.io/mgm_auto_repair/index.html" target="_blank" rel="noopener noreferrer">MGM Auto Repair Website</a></li>
+                <l><a href="https://github.com/drakejhamby/mgm_auto_repair">Github Repo</a></l>
+                
             </ul>
         </section>
     );
